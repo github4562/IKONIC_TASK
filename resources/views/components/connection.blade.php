@@ -17,7 +17,9 @@
     <div>
       <button style="width: 220px" id="get_connections_in_common_" class="btn btn-primary" type="button"
         data-bs-toggle="collapse" data-bs-target="#collapse_" aria-expanded="false" aria-controls="collapseExample">
-        Connections in common ()
+        Connections in common (
+            {{check_mutual_friend($id)}}
+        )
       </button>
       <form action="{{ route('delete-connection') }}" method="POST">
         @csrf
